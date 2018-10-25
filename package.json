@@ -1,0 +1,52 @@
+{
+  "name": "index-defaults",
+  "displayName": "index-defaults",
+  "description": "Generates an index file which exports defaults from the current directory by name",
+  "version": "0.0.1",
+  "publisher": "a-type",
+  "engines": {
+    "vscode": "^1.28.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "IndexDefaults.indexDefaults",
+        "title": "Index default exports in this directory"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "IndexDefaults.indexDefaults",
+          "when": "explorerResourceIsFolder",
+          "group": "Index Defaults"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^5.0.4",
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^8.10.25",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1",
+    "vscode": "^1.1.21"
+  },
+  "dependencies": {
+    "fs-extra": "^7.0.0"
+  }
+}
