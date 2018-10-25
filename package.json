@@ -4,6 +4,10 @@
   "description": "Generates an index file which exports defaults from the current directory by name",
   "version": "0.0.1",
   "publisher": "a-type",
+  "repository": {
+    "url": "https://github.com/a-type/vscode-index-defaults",
+    "type": "git"
+  },
   "engines": {
     "vscode": "^1.28.0"
   },
