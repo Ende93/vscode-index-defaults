@@ -1,6 +1,6 @@
-import { getFileName, getFileType } from './util';
+import { config, getFileName, getFileType } from './util';
 
-const SUPPORTED_FILE_TYPES: string[] = ['js', 'ts', 'tsx', 'jsx', ''];
+const SUPPORTED_FILE_TYPES = typeof config.fileTypes === 'string' ? config.fileTypes.replace(/\s/g, '').split(',') : ['js', 'ts', 'tsx', 'jsx'];
 const TEST_FILE_PATTERNS = ['.test.', '.spec.', '__test__', '__spec__'];
 const LANGUAGE_HELPER_FILE_PATTERNS = ['.d.ts'];
 
