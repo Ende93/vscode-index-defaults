@@ -28,7 +28,9 @@ export { default as baz } from './baz';
 
 ## Extension Settings
 
-TODO - support `.ts` for index, more configurable filters.
+1. Open vscode setting
+2. search `index-defaults`
+3. change `fileTypes` ...config
 
 ## Release Notes
 
