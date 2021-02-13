@@ -2,7 +2,7 @@
   "name": "index-defaults",
   "displayName": "index-defaults",
   "description": "Generates an index file which exports defaults from the current directory by name",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "publisher": "a-type",
   "repository": {
     "url": "https://github.com/a-type/vscode-index-defaults",
@@ -47,7 +47,7 @@
           "default": "js",
           "description": "the output file type"
         },
-        "index-defaults.recurion": {
+        "index-defaults.recursion": {
           "type": "boolean",
           "default": "false",
           "description": "generate the sub folders"

@@ -14,7 +14,7 @@ export async function writeIndexFile(targetFolder: string) {
     filters.isNotLanguageHelperFile,
     filters.isNotIndexFile,
   ]);
-  if (config.recurion) {
+  if (config.recursion) {
     const dirs = await Promise.all(
       files.map(file => resolve(targetFolder, file))
         .map(async file => {

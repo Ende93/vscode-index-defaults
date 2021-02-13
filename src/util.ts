@@ -14,7 +14,7 @@ export function getFileType(file: string) {
 
 export interface IndexDefaultConfig {
   quote: string;
-  recurion: boolean;
+  recursion: boolean;
   outputFileType: string;
   fileTypes: string[];
 }
