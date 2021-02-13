@@ -7,7 +7,7 @@ import { config } from './util'
 export async function writeIndexFile(targetFolder: string) {
   const files = await fs.readdir(targetFolder);
 
-  const indexFilePath = resolve(targetFolder, `index.${config.outputFileType}`);
+  const indexFilePath = resolve(targetFolder, `index${config.outputFileType ? '.' + config.outputFileType : ''}`);
   const indexContent = generateIndexContent(files, [
     filters.isCodeFile,
     filters.isNotTestFile,
