@@ -2,14 +2,14 @@
   "name": "index-defaults",
   "displayName": "index-defaults",
   "description": "Generates an index file which exports defaults from the current directory by name",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "publisher": "a-type",
   "repository": {
     "url": "https://github.com/a-type/vscode-index-defaults",
     "type": "git"
   },
   "engines": {
-    "vscode": "^1.28.0"
+    "vscode": "^1.53.0"
   },
   "categories": [
     "Other"
@@ -33,22 +33,43 @@
           "group": "Index Defaults"
         }
       ]
+    },
+    "configuration": {
+      "title": "index-defaults",
+      "properties": {
+        "index-defaults.fileTypes": {
+          "type": "string",
+          "default": "js, jsx, ts, tsx, vue",
+          "description": "which type of files should to be generated"
+        },
+        "index-defaults.outputFileType": {
+          "type": "string",
+          "default": "js",
+          "description": "the output file type"
+        },
+        "index-defaults.quote": {
+          "type": "string",
+          "default": "\"",
+          "description": "which quote to be used"
+        }
+      }
     }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
+    "vsci": "vsce package",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "postinstall": "node ./node_modules/vscode/bin/install",
-    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    "test": "npm run compile && node ./out/test/runTest.js"
   },
   "devDependencies": {
     "@types/fs-extra": "^5.0.4",
     "@types/mocha": "^2.2.42",
     "@types/node": "^8.10.25",
     "tslint": "^5.8.0",
-    "typescript": "^2.6.1",
-    "vscode": "^1.1.21"
+    "typescript": "^4.1.5",
+    "@types/vscode": "^1.53.0",
+    "vscode-test": "^1.5.0"
   },
   "dependencies": {
     "fs-extra": "^7.0.0"
