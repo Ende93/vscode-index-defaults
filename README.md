@@ -39,3 +39,7 @@ Users appreciate release notes as you update your extension.
 ### 0.0.1
 
 Initial, minimal working feature. JS index file only. Some non-configurable sane filters.
+
+### 1.0.0
+
+add vscode config
