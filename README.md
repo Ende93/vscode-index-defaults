@@ -32,6 +32,17 @@ export { default as baz } from './baz';
 2. search `index-defaults`
 3. change `fileTypes` ...config
 
+### fileTypes
+This config use to filter target type files. The default is `js, jsx, ts, tsx, vue`. Also include the folders or file that has no extension.
+### outputFileType
+This config use as the index file extension. The default is `js`. 
+       
+### recursion
+When be choosed, `index-defaluts` will generate the sub folders of target folder.
+
+### quote
+This config use as the index file import quote. The default is `"`.
+
 ## Release Notes
 
 Users appreciate release notes as you update your extension.
