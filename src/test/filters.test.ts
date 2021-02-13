@@ -12,8 +12,8 @@ suite('Filter Tests', () => {
         'foo.txt',
         'foo.jsx',
         'foo',
-      ].filter(filters.isCodeFileOrDirectory),
-      ['foo.js', 'foo.ts', 'foo.tsx', 'foo.jsx', 'foo'],
+      ].filter(filters.isCodeFile),
+      ['foo.js', 'foo.ts', 'foo.tsx', 'foo.jsx'],
     );
   });
 

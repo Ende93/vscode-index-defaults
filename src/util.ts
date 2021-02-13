@@ -12,4 +12,11 @@ export function getFileType(file: string) {
 }
 
 
-export const config = vscode.workspace.getConfiguration('index-defaults')
+export interface IndexDefaultConfig {
+  quote: string;
+  recurion: boolean;
+  outputFileType: string;
+  fileTypes: string[];
+}
+
+export const config = vscode.workspace.getConfiguration('index-defaults');

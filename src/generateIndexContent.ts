@@ -4,10 +4,10 @@ type FileFilter = (file: string) => boolean;
 
 export function generateIndexContent(
   files: string[],
-  filters: FileFilter[],
+  filters: Array<FileFilter|null>,
 ) {
   const exportedFiles = filters.reduce((f, filter) => {
-    return f.filter(filter);
+    return filter !== null ? f.filter(filter) : f;
   }, files);
 
   const exportLines = exportedFiles.map(file => {

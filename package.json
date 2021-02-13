@@ -47,6 +47,11 @@
           "default": "js",
           "description": "the output file type"
         },
+        "index-defaults.recurion": {
+          "type": "boolean",
+          "default": "false",
+          "description": "generate the sub folders"
+        },
         "index-defaults.quote": {
           "type": "string",
           "default": "\"",
