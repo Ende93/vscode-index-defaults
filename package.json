@@ -57,7 +57,7 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
-    "vsci": "vsce package",
+    "build": "vsce package",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
     "test": "npm run compile && node ./out/test/runTest.js"
